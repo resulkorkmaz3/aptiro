@@ -1,0 +1,134 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Settings {
+  id              String   @id @default(cuid())
+  whatsappNumber  String   @default("+16288006818")
+  businessEmail   String   @default("contact@aptiro.com")
+  businessPhone   String   @default("+16288006818")
+  businessAddress String   @default("1209 MOUNTAIN ROAD PL NE, STE N, ALBUQUERQUE, NM 87110")
+  businessHours   Json     @default("{}")
+  socialLinks     Json     @default("{}")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  title       String
+  titleTr     String   // Turkish title for admin panel
+  slug        String   @unique
+  description String   @db.Text
+  descriptionTr String @db.Text // Turkish description
+  features    Json     @default("[]")
+  icon        String?
+  image       String?
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+  metadata    Json     @default("{}")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Portfolio {
+  id          String   @id @default(cuid())
+  title       String
+  titleTr     String   // Turkish title
+  slug        String   @unique
+  client      String
+  category    String
+  description String   @db.Text
+  descriptionTr String @db.Text // Turkish description
+  challenge   String?  @db.Text
+  solution    String?  @db.Text
+  results     Json     @default("[]")
+  technologies Json    @default("[]")
+  images      Json     @default("[]")
+  featuredImage String?
+  testimonial String?  @db.Text
+  testimonialAuthor String?
+  link        String?
+  order       Int      @default(0)
+  isFeatured  Boolean  @default(false)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Testimonial {
+  id          String   @id @default(cuid())
+  author      String
+  company     String?
+  position    String?
+  content     String   @db.Text
+  contentTr   String   @db.Text // Turkish content
+  rating      Int      @default(5)
+  image       String?
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Contact {
+  id          String   @id @default(cuid())
+  name        String
+  email       String?
+  phone       String?
+  subject     String?
+  message     String   @db.Text
+  source      String   @default("website") // website, whatsapp, etc.
+  status      String   @default("new") // new, contacted, converted, archived
+  notes       String?  @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model SEO {
+  id              String   @id @default(cuid())
+  page            String   @unique
+  title           String
+  titleTr         String   // Turkish title for admin
+  description     String   @db.Text
+  descriptionTr   String   @db.Text // Turkish description
+  keywords        Json     @default("[]")
+  ogImage         String?
+  structuredData  Json?
+  customMeta      Json     @default("[]")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Analytics {
+  id          String   @id @default(cuid())
+  event       String
+  category    String?
+  action      String?
+  label       String?
+  value       Float?
+  page        String?
+  referrer    String?
+  userAgent   String?
+  ip          String?
+  country     String?
+  metadata    Json     @default("{}")
+  createdAt   DateTime @default(now())
+}
