@@ -22,8 +22,8 @@ export const metadata: Metadata = {
 }
 
 const settings = {
-  whatsappNumber: '+16288006818',
-  email: 'contact@aptiro.com',
+  whatsappNumber: '+15053736924',
+  email: 'contact@aptiroglobal.com',
   address: '1209 MOUNTAIN ROAD PL NE, STE N, ALBUQUERQUE, NM 87110'
 }
 

@@ -29,7 +29,7 @@ const navigation = [
   { name: 'Contact', href: '/#contact' },
 ]
 
-export default function Header({ whatsappNumber = '+16288006818' }: HeaderProps) {
+export default function Header({ whatsappNumber = '+15053736924' }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)

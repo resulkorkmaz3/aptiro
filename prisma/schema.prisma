@@ -21,9 +21,9 @@ model Admin {
 
 model Settings {
   id              String   @id @default(cuid())
-  whatsappNumber  String   @default("+16288006818")
+  whatsappNumber  String   @default("+15053736924")
   businessEmail   String   @default("contact@aptiro.com")
-  businessPhone   String   @default("+16288006818")
+  businessPhone   String   @default("+15053736924")
   businessAddress String   @default("1209 MOUNTAIN ROAD PL NE, STE N, ALBUQUERQUE, NM 87110")
   businessHours   Json     @default("{}")
   socialLinks     Json     @default("{}")

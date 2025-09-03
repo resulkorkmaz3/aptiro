@@ -12,7 +12,7 @@ interface HeroSectionProps {
   whatsappNumber?: string
 }
 
-export default function HeroSection({ whatsappNumber = '+16288006818' }: HeroSectionProps) {
+export default function HeroSection({ whatsappNumber = '+15053736924' }: HeroSectionProps) {
   const whatsappUrl = getWhatsAppUrl(whatsappNumber, "Hi! I'm interested in your digital marketing and e-commerce services.")
 
   return (

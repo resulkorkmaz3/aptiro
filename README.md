@@ -45,7 +45,7 @@ DATABASE_URL=
 NEXTAUTH_SECRET=
 NEXTAUTH_URL=
 GOOGLE_ANALYTICS_ID=
-WHATSAPP_DEFAULT_NUMBER="+16288006818"
+WHATSAPP_DEFAULT_NUMBER="+15053736924"
 ```
 
 ## Project Structure
@@ -85,4 +85,4 @@ Admin panel is accessible at `/admin` with Turkish interface for managing:
 ALBUQUERQUE, NM 87110  
 United States
 
-Phone: +1 (628) 800-6818 (WhatsApp only)
+Phone: +1 (505) 373-6924 (WhatsApp only)

@@ -8,7 +8,7 @@ interface AboutTeamSectionProps {
   whatsappNumber?: string
 }
 
-export default function AboutTeamSection({ whatsappNumber = '+16288006818' }: AboutTeamSectionProps) {
+export default function AboutTeamSection({ whatsappNumber = '+15053736924' }: AboutTeamSectionProps) {
   const whatsappUrl = getWhatsAppUrl(whatsappNumber, "Hi! I'd like to discuss working with your team.")
 
   return (
@@ -141,7 +141,7 @@ export default function AboutTeamSection({ whatsappNumber = '+16288006818' }: Ab
             
             <div className="mt-8 pt-6 border-t border-blue-500">
               <div className="text-sm text-blue-100 space-y-1">
-                <p><strong>Phone:</strong> +1 (628) 800-6818</p>
+                <p><strong>Phone:</strong> +1 (505) 373-6924</p>
                 <p><strong>Location:</strong> Albuquerque, New Mexico</p>
                 <p><strong>Service Area:</strong> United States</p>
               </div>

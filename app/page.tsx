@@ -8,7 +8,7 @@ import WhatsAppButton from '@/components/ui/WhatsAppButton'
 
 // In a real app, this would come from the database
 const settings = {
-  whatsappNumber: '+16288006818',
+  whatsappNumber: '+15053736924',
   email: 'contact@aptiroglobal.com',
   address: '1209 MOUNTAIN ROAD PL NE, STE N, ALBUQUERQUE, NM 87110'
 }

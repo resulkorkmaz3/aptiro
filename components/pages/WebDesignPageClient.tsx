@@ -33,7 +33,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import WhatsAppButton from '@/components/ui/WhatsAppButton'
 
-const whatsappNumber = '+16288006818'
+const whatsappNumber = '+15053736924'
 const whatsappUrl = getWhatsAppUrl(whatsappNumber, "Hi! I'm interested in your web design and development services.")
 
 const serviceSchema = {
@@ -42,7 +42,7 @@ const serviceSchema = {
   provider: {
     name: 'Aptiro LLC',
     url: 'https://aptiro.com',
-    telephone: '+16288006818',
+    telephone: '+15053736924',
     address: {
       streetAddress: '1209 MOUNTAIN ROAD PL NE, STE N',
       addressLocality: 'ALBUQUERQUE',

@@ -25,7 +25,7 @@ interface FooterProps {
 }
 
 export default function Footer({ 
-  whatsappNumber = '+16288006818',
+  whatsappNumber = '+15053736924',
   email = 'contact@aptiroglobal.com'
 }: FooterProps) {
   const getWhatsAppUrl = (message?: string) => {
