@@ -63,10 +63,7 @@ const serviceSchema = {
       ratingCount: '89'
     }
   },
-  areaServed: {
-    '@type': 'Country',
-    name: 'United States'
-  },
+  areaServed: 'United States',
   serviceType: 'Web Development Service',
   url: 'https://aptiroglobal.com/services/web-design',
   offers: {

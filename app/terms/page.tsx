@@ -39,7 +39,6 @@ export default function TermsPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Header 
         whatsappNumber={settings.whatsappNumber}
-        email={settings.email}
       />
       
       <main className="pt-24 pb-16">
@@ -68,7 +67,7 @@ export default function TermsPage() {
                 </h2>
                 
                 <p className="text-slate-600 mb-6">
-                  By accessing and using the services provided by Aptiro LLC ("Company," "we," "us," or "our"), you ("Client," "you," or "your") agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our services.
+                  By accessing and using the services provided by Aptiro LLC (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), you (&quot;Client,&quot; &quot;you,&quot; or &quot;your&quot;) agree to be bound by these Terms of Service (&quot;Terms&quot;). If you do not agree to these Terms, please do not use our services.
                 </p>
                 
                 <p className="text-slate-600 mb-6">
@@ -180,7 +179,7 @@ export default function TermsPage() {
                 </h2>
                 
                 <p className="text-slate-600 mb-6">
-                  To the maximum extent permitted by law, Aptiro LLC's liability for any claims related to our services is limited to the amount paid by the client for services in the 12 months preceding the claim.
+                  To the maximum extent permitted by law, Aptiro LLC&apos;s liability for any claims related to our services is limited to the amount paid by the client for services in the 12 months preceding the claim.
                 </p>
 
                 <p className="text-slate-600 mb-4">
@@ -336,7 +335,6 @@ export default function TermsPage() {
       <Footer 
         email={settings.email}
         whatsappNumber={settings.whatsappNumber}
-        businessName={settings.businessName}
       />
       
       <WhatsAppButton phoneNumber={settings.whatsappNumber} />

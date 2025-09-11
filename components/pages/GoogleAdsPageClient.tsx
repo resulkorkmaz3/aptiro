@@ -54,10 +54,7 @@ const serviceSchema = {
       ratingCount: '127'
     }
   },
-  areaServed: {
-    '@type': 'Country',
-    name: 'United States'
-  },
+  areaServed: 'United States',
   serviceType: 'Digital Marketing Service',
   url: 'https://aptiroglobal.com/services/google-ads',
   offers: {

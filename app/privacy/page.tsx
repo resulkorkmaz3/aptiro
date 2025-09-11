@@ -39,7 +39,6 @@ export default function PrivacyPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Header 
         whatsappNumber={settings.whatsappNumber}
-        email={settings.email}
       />
       
       <main className="pt-24 pb-16">
@@ -228,7 +227,7 @@ export default function PrivacyPage() {
               {/* Section 9 */}
               <section className="mb-12">
                 <h2 className="text-2xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-3">
-                  9. Children's Privacy
+                  9. Children&apos;s Privacy
                 </h2>
                 
                 <p className="text-slate-600 mb-6">
@@ -243,7 +242,7 @@ export default function PrivacyPage() {
                 </h2>
                 
                 <p className="text-slate-600 mb-6">
-                  We may update this privacy policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the new privacy policy on this page and updating the "Last updated" date. We encourage you to review this privacy policy periodically.
+                  We may update this privacy policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the new privacy policy on this page and updating the &quot;Last updated&quot; date. We encourage you to review this privacy policy periodically.
                 </p>
               </section>
 
@@ -290,7 +289,6 @@ export default function PrivacyPage() {
       <Footer 
         email={settings.email}
         whatsappNumber={settings.whatsappNumber}
-        businessName={settings.businessName}
       />
       
       <WhatsAppButton phoneNumber={settings.whatsappNumber} />

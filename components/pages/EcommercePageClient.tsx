@@ -66,10 +66,7 @@ const serviceSchema = {
       ratingCount: '156'
     }
   },
-  areaServed: {
-    '@type': 'Country',
-    name: 'United States'
-  },
+  areaServed: 'United States',
   serviceType: 'E-Commerce Management Service',
   url: 'https://aptiroglobal.com/services/ecommerce',
   offers: {
