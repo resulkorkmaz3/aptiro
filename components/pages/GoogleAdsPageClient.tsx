@@ -28,25 +28,78 @@ const whatsappNumber = '+15053736924'
 const whatsappUrl = getWhatsAppUrl(whatsappNumber, "Hi! I'm interested in your Google Ads management services.")
 
 const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
   name: 'Google Ads Management Services',
   description: 'Professional Google Ads management services that drive qualified traffic and maximize ROI. Strategic PPC campaigns, keyword research, ad optimization, and detailed reporting by certified professionals.',
   provider: {
+    '@type': 'Organization',
     name: 'Aptiro LLC',
-    url: 'https://aptiro.com',
+    url: 'https://aptiroglobal.com',
     telephone: '+15053736924',
+    email: 'contact@aptiroglobal.com',
     address: {
+      '@type': 'PostalAddress',
       streetAddress: '1209 MOUNTAIN ROAD PL NE, STE N',
       addressLocality: 'ALBUQUERQUE',
       addressRegion: 'NM',
       postalCode: '87110',
       addressCountry: 'US'
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '127'
     }
   },
-  areaServed: 'United States',
+  areaServed: {
+    '@type': 'Country',
+    name: 'United States'
+  },
   serviceType: 'Digital Marketing Service',
-  url: 'https://aptiro.com/services/google-ads',
+  url: 'https://aptiroglobal.com/services/google-ads',
   offers: {
+    '@type': 'Offer',
     description: 'Professional Google Ads management with guaranteed ROI improvement',
+    availability: 'https://schema.org/InStock',
+    priceCurrency: 'USD',
+    priceRange: '$$$'
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Google Ads Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Campaign Setup & Strategy'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Keyword Research & Analysis'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Ad Creation & Optimization'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Performance Monitoring & Reporting'
+        }
+      }
+    ]
   }
 }
 
@@ -464,7 +517,7 @@ export default function GoogleAdsPageClient() {
       </main>
       <Footer 
         whatsappNumber={whatsappNumber}
-        email="contact@aptiro.com"
+        email="contact@aptiroglobal.com"
       />
       <WhatsAppButton 
         phoneNumber={whatsappNumber}

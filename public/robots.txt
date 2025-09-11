@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://aptiroglobal.com/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /api/
+
+# Allow important directories
+Allow: /services/
+Allow: /about/
+Allow: /images/
+
+# Crawl-delay for better server performance
+Crawl-delay: 1

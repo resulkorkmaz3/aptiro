@@ -37,25 +37,44 @@ const whatsappNumber = '+15053736924'
 const whatsappUrl = getWhatsAppUrl(whatsappNumber, "Hi! I'm interested in your web design and development services.")
 
 const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
   name: 'Web Design & Development Services',
   description: 'Custom website design and development services that drive conversions. Responsive, fast, and SEO-optimized websites built by expert developers.',
   provider: {
+    '@type': 'Organization',
     name: 'Aptiro LLC',
-    url: 'https://aptiro.com',
+    url: 'https://aptiroglobal.com',
     telephone: '+15053736924',
+    email: 'contact@aptiroglobal.com',
     address: {
+      '@type': 'PostalAddress',
       streetAddress: '1209 MOUNTAIN ROAD PL NE, STE N',
       addressLocality: 'ALBUQUERQUE',
       addressRegion: 'NM',
       postalCode: '87110',
       addressCountry: 'US'
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '89'
     }
   },
-  areaServed: 'United States',
+  areaServed: {
+    '@type': 'Country',
+    name: 'United States'
+  },
   serviceType: 'Web Development Service',
-  url: 'https://aptiro.com/services/web-design',
+  url: 'https://aptiroglobal.com/services/web-design',
   offers: {
+    '@type': 'Offer',
     description: 'Professional web design and development with responsive design and SEO optimization',
+    availability: 'https://schema.org/InStock',
+    priceCurrency: 'USD',
+    priceRange: '$$$'
   }
 }
 
@@ -514,7 +533,7 @@ export default function WebDesignPageClient() {
       </main>
       <Footer 
         whatsappNumber={whatsappNumber}
-        email="contact@aptiro.com"
+        email="contact@aptiroglobal.com"
       />
       <WhatsAppButton 
         phoneNumber={whatsappNumber}

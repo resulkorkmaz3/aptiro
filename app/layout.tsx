@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://aptiro.com',
+    url: 'https://aptiroglobal.com',
     siteName: 'Aptiro LLC',
     title: 'Aptiro LLC - Google Ads & Web Design Experts',
     description: 'Professional Google Ads management, web design, and e-commerce solutions. Get results-driven digital marketing services.',

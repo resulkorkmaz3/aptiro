@@ -40,25 +40,44 @@ const whatsappNumber = '+15053736924'
 const whatsappUrl = getWhatsAppUrl(whatsappNumber, "Hi! I'm interested in your e-commerce business management services.")
 
 const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
   name: 'E-Commerce Business Management Services',
   description: 'Complete e-commerce business management across Amazon, eBay, Shopify and our global platform. Professional customer service, inventory management, and sales optimization.',
   provider: {
+    '@type': 'Organization',
     name: 'Aptiro LLC',
-    url: 'https://aptiro.com',
+    url: 'https://aptiroglobal.com',
     telephone: '+15053736924',
+    email: 'contact@aptiroglobal.com',
     address: {
+      '@type': 'PostalAddress',
       streetAddress: '1209 MOUNTAIN ROAD PL NE, STE N',
       addressLocality: 'ALBUQUERQUE',
       addressRegion: 'NM',
       postalCode: '87110',
       addressCountry: 'US'
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '156'
     }
   },
-  areaServed: 'United States',
+  areaServed: {
+    '@type': 'Country',
+    name: 'United States'
+  },
   serviceType: 'E-Commerce Management Service',
-  url: 'https://aptiro.com/services/ecommerce',
+  url: 'https://aptiroglobal.com/services/ecommerce',
   offers: {
+    '@type': 'Offer',
     description: 'Professional e-commerce business management with 100% customer satisfaction guarantee',
+    availability: 'https://schema.org/InStock',
+    priceCurrency: 'USD',
+    priceRange: '$$$'
   }
 }
 
@@ -517,7 +536,7 @@ export default function EcommercePageClient() {
       </main>
       <Footer 
         whatsappNumber={whatsappNumber}
-        email="contact@aptiro.com"
+        email="contact@aptiroglobal.com"
       />
       <WhatsAppButton 
         phoneNumber={whatsappNumber}

@@ -30,21 +30,6 @@ const nextConfig = {
         destination: '/#services',
         permanent: false,
       },
-      {
-        source: '/services/google-ads',
-        destination: '/#services',
-        permanent: false,
-      },
-      {
-        source: '/services/web-design',
-        destination: '/#services',
-        permanent: false,
-      },
-      {
-        source: '/services/ecommerce',
-        destination: '/#services',
-        permanent: false,
-      },
     ]
   },
 }
