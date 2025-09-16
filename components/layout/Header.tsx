@@ -19,9 +19,9 @@ const navigation = [
     name: 'Services', 
     href: '/#services',
     submenu: [
-      { name: 'Google Ads Management', href: '/#services' },
-      { name: 'Web Design & Development', href: '/#services' },
-      { name: 'E-Commerce Business', href: '/#services' },
+      { name: 'Google Ads Management', href: '/services/google-ads' },
+      { name: 'Web Design & Development', href: '/services/web-design' },
+      { name: 'E-Commerce Business', href: '/services/ecommerce' },
     ]
   },
   { name: 'Portfolio', href: '/#services' },
@@ -43,6 +43,27 @@ export default function Header({ whatsappNumber = '+15053736924' }: HeaderProps)
     
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    // Handle initial hash navigation when page loads
+    const hash = window.location.hash
+    if (hash) {
+      const sectionId = hash.substring(1) // Remove #
+      setTimeout(() => {
+        const element = document.getElementById(sectionId)
+        if (element) {
+          const headerOffset = 80
+          const elementPosition = element.getBoundingClientRect().top
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          })
+        }
+      }, 500) // Longer delay to ensure page is fully loaded
+    }
   }, [])
 
   useEffect(() => {
