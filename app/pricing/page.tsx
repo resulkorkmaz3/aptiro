@@ -27,16 +27,11 @@ const metadata: Metadata = {
   },
 }
 
-interface PricingPageProps {
-  whatsappNumber?: string
-}
-
-export default function PricingPage({ 
-  whatsappNumber = '+15053736924' 
-}: PricingPageProps) {
+export default function PricingPage() {
+  const whatsappNumber = '+15053736924';
   const getWhatsAppUrl = (service: string, plan: string) => {
     const cleanNumber = whatsappNumber.replace(/[^\d]/g, '');
-    const message = encodeURIComponent(`Hi! I'm interested in the ${plan} plan for ${service}. Can you provide more details?`);
+    const message = encodeURIComponent(`Hi! I&apos;m interested in the ${plan} plan for ${service}. Can you provide more details?`);
     return `https://wa.me/${cleanNumber}?text=${message}`;
   };
 
@@ -386,7 +381,8 @@ export default function PricingPage({
     }
   ];
 
-  const renderEmailCard = (plan: any, category: string) => {
+  // Email card component with state
+  const EmailCard = ({ plan, category }: { plan: any, category: string }) => {
     const [selectedUsers, setSelectedUsers] = React.useState(plan.userOptions[0]);
     const totalPrice = plan.basePrice * selectedUsers;
 
@@ -566,9 +562,9 @@ export default function PricingPage({
             </>
           )}
         </div>
+        </div>
       </div>
-    </div>
-  );
+    );
   };
 
   return (
@@ -639,7 +635,7 @@ export default function PricingPage({
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
-              {emailPlans.map(plan => renderEmailCard(plan, 'E-posta Kurulumu'))}
+              {emailPlans.map(plan => <EmailCard key={plan.name} plan={plan} category="E-posta Kurulumu" />)}
             </div>
           </section>
 
@@ -647,7 +643,7 @@ export default function PricingPage({
           <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white">
             <h2 className="text-3xl font-bold mb-4">Need Something Custom?</h2>
             <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-              Every business is unique. Let's discuss your specific requirements and create a custom solution that fits your needs and budget.
+              Every business is unique. Let&apos;s discuss your specific requirements and create a custom solution that fits your needs and budget.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

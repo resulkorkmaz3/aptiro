@@ -24,13 +24,8 @@ export const metadata: Metadata = {
   },
 }
 
-interface RefundPolicyPageProps {
-  whatsappNumber?: string
-}
-
-export default function RefundPolicyPage({ 
-  whatsappNumber = '+15053736924' 
-}: RefundPolicyPageProps) {
+export default function RefundPolicyPage() {
+  const whatsappNumber = '+15053736924';
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Header whatsappNumber={whatsappNumber} />
