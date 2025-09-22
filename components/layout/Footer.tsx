@@ -34,7 +34,7 @@ export default function Footer({
     return `https://wa.me/${cleanNumber}${encodedMessage ? `?text=${encodedMessage}` : ''}`;
   };
 
-  const currentYear = new Date().getFullYear();
+  const currentYear = 2024;
   
   const services = [
     { 
@@ -59,7 +59,8 @@ export default function Footer({
     { name: 'Our Services', href: '/#services' },
     { name: 'Contact Us', href: '/#contact' },
     { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' }
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Refund Policy', href: '/refund-policy' }
   ];
 
   const businessInfo = {
@@ -342,6 +343,9 @@ export default function Footer({
               </Link>
               <Link href="/terms" className="text-slate-400 hover:text-white transition-colors">
                 Terms of Service
+              </Link>
+              <Link href="/refund-policy" className="text-slate-400 hover:text-white transition-colors">
+                Refund Policy
               </Link>
               <div className="flex items-center gap-2 text-slate-400">
                 <FaShieldAlt className="text-green-400" />
